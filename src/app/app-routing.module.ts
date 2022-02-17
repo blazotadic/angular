@@ -12,6 +12,7 @@ import { PlaygroundDetailComponent } from "./playground-detail/playground-detail
 import { PlaygroundDetailResolver } from "./playground-detail/playground-detail.resolver";
 import { PlaygroundComponent } from "./playground/playground.component";
 import { PlaygroundGuard } from "./playground/playground.guard";
+import { SignupComponent } from "./signup/signup.component";
 import { StudentComponent } from "./student/student.component";
 
 const routes: Routes = [
@@ -40,6 +41,10 @@ const routes: Routes = [
     path: 'login',
     component: LoginComponent,
     canActivate: [IsAlreadyAuthenticatedGuard]
+  },
+  {
+    path: 'signup',
+    component: SignupComponent,
   },
   {
     path: 'admin', // http://localhost:4200/admin

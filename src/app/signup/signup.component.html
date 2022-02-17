@@ -1,0 +1,38 @@
+<div class="columnns mt-5">
+    <div class="column is-half">
+        <form #signupForm="ngForm" (ngSubmit)="signup(signupForm)">
+            <div class="field">
+                <input class="input" type="text" name="name" placeholder="Name" ngModel>
+            </div>
+            <div class="field">
+                <input class="input" type="taxt" name="last name" placeholder="Last name" ngModel>
+            </div>
+            <div class="field">
+                <p class="control has-icons-left has-icons-right">
+                <input class="input" type="text" placeholder="Username" name="username" ngModel>
+                <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                </span>
+                <span class="icon is-small is-right">
+                    <i class="fas fa-check"></i>
+                </span>
+                </p>
+            </div>
+            <div class="field">
+                <p class="control has-icons-left">
+                <input class="input" type="password" name="password" placeholder="Password" ngModel>
+                <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                </span>
+                </p>
+            </div>
+            <div class="field">
+                <p class="control">
+                <button class="button is-success" type="submit">
+                    Register
+                </button>
+                </p>
+            </div>
+        </form>
+    </div>
+</div>

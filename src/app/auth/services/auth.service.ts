@@ -5,6 +5,7 @@ import { environment } from "src/environments/environment";
 import { Login } from "../models/login.model";
 import { tap } from "rxjs/operators";
 import { JwtToken } from "../models/jwt.model";
+import { Signup } from "../models/signup.model";
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
@@ -26,5 +27,11 @@ export class AuthService {
   logout(): void {
     localStorage.removeItem('academy-token');
     this.isAuthenticated.next(false);
+  }
+
+
+  authenticateSignup(signupData: Signup) {
+    const url = `${environment.apiUrl}authenticate/register`;
+    this.httpClient.post(url, signupData);
   }
 }

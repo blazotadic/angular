@@ -20,6 +20,7 @@ import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { JwtInterceptor } from './auth/interceptors/jwt.interceptor';
 import { ErrorInterceptor } from './auth/interceptors/error.interceptor';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ErrorInterceptor } from './auth/interceptors/error.interceptor';
     AdminComponent,
     UserPreviewComponent,
     LoginComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
